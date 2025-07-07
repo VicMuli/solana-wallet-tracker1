@@ -4,14 +4,65 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Solana Wallet Balance Tracker</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: #1e1e1e;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 15px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      background: #00ffa2;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: #00cc85;
+    }
+
+    .output {
+      margin-top: 20px;
+      font-size: 18px;
+      min-height: 20px;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
     <h1>🔍 Solana Wallet Balance Tracker</h1>
 
     <label for="wallet">Enter Wallet Address:</label>
-    <input type="text" id="wallet" placeholder="Enter Solana wallet" />
+    <input type="text" id="wallet" placeholder="Ex: 7FFF5z6DBvP1..." />
 
     <button onclick="checkBalance()">Check Balance</button>
 
